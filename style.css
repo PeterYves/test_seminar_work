@@ -1,0 +1,128 @@
+:root {
+  --navy: #14274e;
+  --navy-light: #e8edf8;
+  --paper: #f4f6fb;
+  --card: #ffffff;
+  --ink: #1b2233;
+  --muted: #5b6577;
+  --line: #dde3ef;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.65;
+}
+
+/* Header */
+.hero {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 4.5rem 1.5rem 6rem;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+}
+
+.hero p {
+  max-width: 34rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Cards overlap the header slightly */
+main {
+  max-width: 68rem;
+  margin: -3.5rem auto 0;
+  padding: 0 1.5rem 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.member {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 6px 20px rgba(20, 39, 78, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.member h2 {
+  font-family: var(--serif);
+  color: var(--navy);
+  font-size: 1.4rem;
+  line-height: 1.25;
+  margin: 0 0 0.25rem;
+}
+
+.focus {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+
+.member p { margin-top: 0; }
+
+.tags {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  background: var(--navy-light);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 0 1.5rem 3rem;
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 3rem 1.25rem 5rem; }
+  main { padding: 0 1rem 2rem; }
+}
